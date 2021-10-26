@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from rest_framework import viewsets
 from django.http import HttpResponse
 
@@ -6,7 +7,7 @@ from .serializers import ParsSerializer
 
 
 def index(request):
-    return HttpResponse("main page coming soon")
+    return render (request, "api/index.html")
 
 
 class ParsView(viewsets.ModelViewSet):
